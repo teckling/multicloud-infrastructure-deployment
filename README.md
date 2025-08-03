@@ -16,6 +16,7 @@ With this structure or arrangement, RnD engineers can choose their preferred cli
 The end user might receive request to deploy app01 for company XYZ to aws . All he need to do is e.g. deploy XYZ app01 aws. If at a later date XYZ decided to deploy app01 to Azure, then all the engineer need to do is to issue:
 
 destroy XYZ app01 aws
+
 deploy XYZ app01 azure
 
 Notice that end user only need a rudimentary knowledge of different clouds. End user does not even need to know which managment configuration tool is being use behind the scene, as these are mostly decided by the engineer who writes the automation scripts. However, knowledge of CLI and management configuration tool can still be useful if something failed to work, and cryptic error message appear on the screen, requiring further troubleshooting.
