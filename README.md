@@ -11,7 +11,7 @@ The end user is not required to know aws cli, azure cli, or gcloud cli in great 
 
 In addition to the aforementioned cloud cli, this project will also aim to show that various management configuration tools such as ansible, salt, puppet can also be group together in this folder structure and use in the deployment of web application.
 
-With this structure or arrangement, RnD engineers can choose their preferred cli and tools.
+With this structure or arrangement, each RnD engineer can choose his preferred cli and tools. The script that he creates can be used by other RnD engineers as well, either by expanding or modifying existing content, or copy and modify in separate sub-folders.
 
 (i) For example, Engineer_A may be more familiar with gcloud CLI and salt, he thus choose these to write his deployment script for app01.
 
