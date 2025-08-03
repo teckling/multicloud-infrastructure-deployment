@@ -1,2 +1,6 @@
 # multicloud-infrastructure-deployment
-A bash scripting automation tool that can deploy multiple dynamic websites, multiple web/nodejs/java application to AWS, Azure and Google clouds.
+A bash scripting automation tool that can deploy multiple web applications to AWS, Azure or Google clouds.
+This project primarily aim to create a structure of file system and folders whereby automation scripts written primarily in aws cli, az cli, or gcloud cli can be group together, and use to deploy different web application to either AWS, Azure or Google cloud. The end user of this automation script only need to remember simple commands e.g. deploy app01 azure, or deploy app02 gcloud. The end user is not required to know aws cli, azure cli, or gcloud cli in great details.
+In addition to the aforementioned cli, this project will also aim to show that various management configuration tools such as ansible, salt, puppet can also be group together and use in the deployment of web application.
+With this structure, if said a newly hired engineer is more familiar with Alibaba cloud and Chef, he can in principle add aliyun cli and Chef to the structure, and use it to deploy a new web application. Again the end user of the script only need to remember simple command e.g. deploy app03 alibaba
+It is expected that all engineers that contribute to this structure take the following into consideration:
