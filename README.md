@@ -3,9 +3,9 @@ A bash scripting automation tool that can deploy multiple web applications to an
 
 This project primarily aim to create a structure of file system and folders whereby automation scripts written primarily in aws cli, az cli, or gcloud cli by RnD engineers can be grouped together in separate subfolders, under one big folder. The automation scripts thus created can be used by end user to deploy different web applications to either AWS, Azure or Google cloud. The end user of this automation script only need to remember simple commands. For example:
 
-deploy app01 azure
+deploy company_A app01 azure
 
-deploy app02 gcloud
+deploy customer_B app02 gcloud
 
 The end user is not required to know aws cli, azure cli, or gcloud cli in great details. Although such knowledge is beneficial if automation script failed requiring troubleshooting e.g. create VM failed because quote limit is reached.
 
