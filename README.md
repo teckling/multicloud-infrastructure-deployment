@@ -15,7 +15,7 @@ In addition to the aforementioned cloud cli, this project will also aim to show 
 
 In short, we are going to group aws/azure/gcloud CLI scripts and ansible, salt, puppet all under one big folder.
 
-With this structure, each RnD engineer can choose his preferred cli and tools. The script that he creates can be used by other RnD engineers as well, either by expanding or modifying existing content, or copy and modify in separate sub-folders.
+With this structure, each RnD engineer can choose his or her preferred cli and tools. The script that he creates can be used by other RnD engineers as well, either by expanding or modifying existing content, or copy and modify in separate sub-folders.
 
 (i) For example, Engineer_A may be more familiar with gcloud CLI and salt, he thus choose these to write his deployment script for app01. In some subfolder under this one big folder.
 
@@ -30,7 +30,7 @@ The end user might receive request to deploy app01 for company XYZ to aws . All 
 decommission XYZ app01 aws
 deploy XYZ app01 azure
 
-Notice that end user only need a rudimentary knowledge of different clouds available. End user does not even need to know which managment configuration tool is being use behind the scene, as these are mostly decided by the RnD engineer who writes the automation scripts. However, knowledge of CLI and management configuration tool can still be useful if something failed to work, and cryptic error message appear on the screen, requiring further troubleshooting. This happen all the time.
+Notice that end user only need a rudimentary knowledge of different clouds available. End user does not even need to know which managment configuration tool is being use behind the scene, as these are mostly decided by the RnD engineers who write the automation scripts. However, knowledge of CLI and management configuration tool can still be useful if something failed to work, and cryptic error message appear on the screen, requiring further troubleshooting. This happen all the time.
 
 It is expected that all engineers who write automation scripts that contribute to this structure take the following into consideration:
 
@@ -40,7 +40,7 @@ It is expected that all engineers who write automation scripts that contribute t
 
 (3) the application enviroment thus created by the script should meet popular industry security and operation standards e.g SOC2, ISO 27001. Preferrably, the automation script may regularly collect informations on the application environment that can be used in internal or external audits involving security and operation.
 
-(4) Keep in mind disaster recovery requirement. If a certain application is down due to cloud provider problem in North Virginia, we can quickly deploy the same environment in Sydney Australia, with reasonable downtime.
+(4) Keep in mind disaster recovery requirement. If a certain application is down due to cloud provider problem in North Virginia, we can quickly deploy the same environment to Sydney Australia, within reasonable downtime.
 
 (5) Keep in mind granular recovery requirement. Sometime it just does not make sense to rollback 3 hours or 6 hours earlier to recover some old data, but you lost 3 or 6 hours of new data. We want to recover old data without losing new data.
 
