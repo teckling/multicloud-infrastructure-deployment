@@ -4,6 +4,7 @@ A bash scripting automation tool that can deploy multiple web applications to an
 This project primarily aim to create a structure of file system and folders whereby automation scripts written primarily in aws cli, az cli, or gcloud cli by RnD engineers can be grouped together under one "roof". The automation scripts thus created can be used by end user to deploy different web applications to either AWS, Azure or Google cloud. The end user of this automation script only need to remember simple commands. For example:
 
 deploy for_company_A app01 azure
+
 deploy for_customer_B app02 gcloud
 
 When the above commands get run, the automation script will start deploying VPC and subnets, VM, loadbalancer, storage bucket, security group, database etc, and pull down software from either github, s3, bitbucket or other sources and deploy it to the specific cloud.
@@ -29,16 +30,18 @@ The end user might receive request to deploy app01 for company XYZ to aws . All 
 decommission XYZ app01 aws
 deploy XYZ app01 azure
 
-Notice that end user only need a rudimentary knowledge of different clouds available. End user does not even need to know which managment configuration tool is being use behind the scene, as these are mostly decided by the engineer who writes the automation scripts. However, knowledge of CLI and management configuration tool can still be useful if something failed to work, and cryptic error message appear on the screen, requiring further troubleshooting. This happen all the time.
+Notice that end user only need a rudimentary knowledge of different clouds available. End user does not even need to know which managment configuration tool is being use behind the scene, as these are mostly decided by the RnD engineer who writes the automation scripts. However, knowledge of CLI and management configuration tool can still be useful if something failed to work, and cryptic error message appear on the screen, requiring further troubleshooting. This happen all the time.
 
 It is expected that all engineers who write automation scripts that contribute to this structure take the following into consideration:
 
-(1) always include at least one monitoring tool in your deployment e.g. zabbix, grafana, or kubernetes so that end user can use this monitoring tool to monitor every component in the app environment that they deployed
+(1) always include at least one monitoring tool in your deployment e.g. zabbix, grafana, or kubernetes so that end user can use this monitoring tool to monitor every component in the application environment that they deployed
 
 (2) preferrably, there should be an alert system, so that if a fault occurred e.g. lost connection to mysql database, a phone call can be made to an on-duty engineer who can investigate and rectify the fault.
 
-(3) the app enviroment thus created by the script should meet popular industry security and operation standards e.g SOC2, ISO 27001. Preferrably, the automation script may regularly collect informations on the app environment that can be used in internal or external audits involving security and operation.
+(3) the application enviroment thus created by the script should meet popular industry security and operation standards e.g SOC2, ISO 27001. Preferrably, the automation script may regularly collect informations on the application environment that can be used in internal or external audits involving security and operation.
 
-(4) Keep in mind disaster recovery requirement. If a certain application is down due to cloud provider problem in North Virginia, we can quickly deploy the same environment in Sydney Australia, with reasonable downtime. 
+(4) Keep in mind disaster recovery requirement. If a certain application is down due to cloud provider problem in North Virginia, we can quickly deploy the same environment in Sydney Australia, with reasonable downtime.
+
+(5) Keep in mind granular recovery requirement. Sometime it just does not make sense to rollback 3 hours or 6 hours earlier to recover some old data, but you lost 3 or 6 hours of new data. We want to recover old data without losing new data.
 
 Have fun.
