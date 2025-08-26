@@ -37,7 +37,7 @@ It is expected that all engineers who write automation scripts that contribute t
 
 (1) always include at least one monitoring tool in your deployment e.g. zabbix, grafana, or prometeus so that end user can use this monitoring tool to monitor every component in the application environment that they deployed
 
-(2) Daily/weekly/monthly cost/billing breakdown should be monitored by the tool mentioned in (1) above, and visible to both the operation and management people. We dont want to be haunted by large amount of money spent on useless snapshots dated back 5 years.
+(2) Daily/weekly/monthly cost/billing information should be made available. May be using the monitoring tool mentioned in (1) above. We want to be able to see cost per cloud, per region, per customer etc.
 
 (3) preferrably, there should be an alert system, so that if a fault occurred e.g. lost connection to mysql database, a phone call can be made to an on-duty engineer who can investigate and rectify the fault.
 
