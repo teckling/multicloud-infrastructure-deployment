@@ -34,14 +34,16 @@ Notice that end user only need a rudimentary knowledge of different clouds avail
 
 It is expected that all engineers who write automation scripts that contribute to this structure take the following into consideration:
 
-(1) always include at least one monitoring tool in your deployment e.g. zabbix, grafana, or kubernetes so that end user can use this monitoring tool to monitor every component in the application environment that they deployed
+(1) always include at least one monitoring tool in your deployment e.g. zabbix, grafana, or prometeus so that end user can use this monitoring tool to monitor every component in the application environment that they deployed
 
-(2) preferrably, there should be an alert system, so that if a fault occurred e.g. lost connection to mysql database, a phone call can be made to an on-duty engineer who can investigate and rectify the fault.
+(2) Daily/weekly/monthly cost/billing breakdown should be monitored by the tool mentioned in (1) above, and visible to both the operation and management people. We dont want to be haunted by large amount of money spent on useless snapshots dated back 5 years.
 
-(3) the application enviroment thus created by the script should meet popular industry security and operation standards e.g SOC2, ISO 27001. Preferrably, the automation script may regularly collect informations on the application environment that can be used in internal or external audits involving security and operation.
+(3) preferrably, there should be an alert system, so that if a fault occurred e.g. lost connection to mysql database, a phone call can be made to an on-duty engineer who can investigate and rectify the fault.
 
-(4) Keep in mind disaster recovery requirement. If a certain application is down due to cloud provider problem in North Virginia, we can quickly deploy the same environment to Sydney Australia, within reasonable downtime.
+(4) the application enviroment thus created by the script should meet popular industry security and operation standards e.g SOC2, ISO 27001. Preferrably, the automation script may regularly collect informations on the application environment that can be used in internal or external audits involving security and operation.
 
-(5) Keep in mind granular recovery requirement. Sometime it just does not make sense to rollback 3 hours or 6 hours earlier to recover some old data, but you lost 3 or 6 hours of new data. We want to recover old data without losing new data.
+(5) Keep in mind disaster recovery requirement. If a certain application is down due to cloud provider problem in North Virginia, we can quickly deploy the same environment to Sydney Australia, within reasonable downtime.
+
+(6) Keep in mind granular recovery requirement. Sometime it just does not make sense to rollback 3 hours or 6 hours earlier to recover some old data for customer A, but you lost 3 or 6 hours of new data for customer B. We want to recover old data for customer A without losing new data for customer B.
 
 Have fun.
