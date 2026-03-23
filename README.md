@@ -43,7 +43,7 @@ It is expected that all engineers who write automation scripts that contribute t
 
 (4) the application enviroment thus created by the script should meet popular industry security and operation standards e.g SOC2, ISO 27001. Preferrably, the automation script may regularly collect informations on the application environment that can be used in internal or external audits involving security and operation.
 
-(5) Keep in mind disaster recovery requirement. If a certain application is down due to cloud provider problem in North Virginia, we can quickly deploy the same environment to Sydney Australia, within reasonable downtime.
+(5) Keep in mind disaster recovery requirement. If a certain application is down due to cloud provider problem in North Virginia, we can quickly deploy the same environment to Sydney Australia, within reasonable downtime. The resources required to deploy in Sydney, including source code, database snapshot should already be in Sydney. It is anticipate that some infrastructure that does not incure excessive cost like IAM, VPC etc are already in place to speed up recovery time.
 
 (6) Keep in mind granular recovery requirement. Sometime it just does not make sense to rollback 3 hours or 6 hours earlier to recover some old data for customer A, but you lost 3 or 6 hours of new data for customer B. We want to recover old data for customer A without losing new data for customer B.
 
